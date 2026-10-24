@@ -1,0 +1,131 @@
+{
+  "# [PENANDA FUNGSI: Data Informasi Perusahaan Agung Sukses Farm Fresh]": "Company Profile",
+  "company": {
+    "name": "Agung Sukses Farm Fresh",
+    "shortName": "AGUNG SUKSES",
+    "tagline": "Fresh from Farm, Good for You.",
+    "description": "Menyediakan wortel segar yang dipanen langsung dari kebun dan diproses dengan menjaga kualitas serta kesegarannya.",
+    "about": "Agung Sukses Farm Fresh merupakan usaha yang bergerak di bidang pertanian dan penyediaan wortel segar. Kami menghadirkan hasil pertanian berkualitas yang dipanen dari lahan pertanian dan diproses dengan proses yang memperhatikan kebersihan, kesegaran, serta kualitas produk.",
+    "vision": "Menjadi penyedia wortel segar terpercaya yang mendukung kesehatan masyarakat dan kesejahteraan petani lokal.",
+    "mission": [
+      "Menyediakan wortel segar berkualitas tinggi.",
+      "Menjaga kualitas melalui proses yang higienis dan berkelanjutan.",
+      "Memberdayakan petani lokal dan lingkungan."
+    ],
+    "phone": "081234567890",
+    "email": "info@agungsuksesfarm.com",
+    "address": "Kebun Agung Sukses Farm, Kab. Banyumas, Jawa Tengah",
+    "hours": "Senin - Sabtu, 08.00 - 17.00 WIB"
+  },
+  "# [PENANDA FUNGSI: Data Katalog Produk & Spesifikasi]": "Products Data",
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Wortel Fresh",
+      "price": 15000,
+      "unit": "kg",
+      "category": "Retail",
+      "description": "Wortel segar hasil panen harian. Cocok untuk kebutuhan rumah tangga dan kuliner.",
+      "specs": {
+        "size": "Sedang - Besar",
+        "color": "Oranye cerah",
+        "grade": "Grade A"
+      },
+      "image": "/images/wortel-fresh.jpg",
+      "# [INPUT GAMBAR: /images/wortel-fresh.jpg - Wortel segar panen di wadah kayu]": "Product Image"
+    },
+    {
+      "id": "prod-2",
+      "name": "Wortel Premium",
+      "price": 18000,
+      "unit": "kg",
+      "category": "Retail",
+      "description": "Wortel pilihan dengan kualitas lebih unggul dan seleksi ketat.",
+      "specs": {
+        "size": "Besar",
+        "color": "Oranye cerah",
+        "grade": "Grade A+"
+      },
+      "image": "/images/wortel-premium.jpg",
+      "# [INPUT GAMBAR: /images/wortel-premium.jpg - Wortel kualitas super ikat rapi]": "Product Image"
+    },
+    {
+      "id": "prod-3",
+      "name": "Paket Grosir",
+      "price": 12000,
+      "unit": "kg",
+      "category": "Grosir",
+      "description": "Untuk kebutuhan bisnis, retail, dan distribusi dalam jumlah besar.",
+      "specs": {
+        "minOrder": "50 kg",
+        "packaging": "Karung / Karton",
+        "grade": "Grade A"
+      },
+      "image": "/images/paket-grosir.jpg",
+      "# [INPUT GAMBAR: /images/paket-grosir.jpg - Wortel tumpukan jumlah banyak dalam crate]": "Product Image"
+    },
+    {
+      "id": "prod-4",
+      "name": "Wortel Organik",
+      "price": 0,
+      "unit": "kg",
+      "category": "Retail",
+      "description": "Wortel organik tanpa pestisida kimia, lebih sehat dan alami.",
+      "specs": {
+        "certification": "Proses Sertifikasi"
+      },
+      "isComingSoon": true,
+      "image": "/images/wortel-organik.jpg",
+      "# [INPUT GAMBAR: /images/wortel-organik.jpg - Wortel bebas pestisida]": "Product Image"
+    }
+  ],
+  "# [PENANDA FUNGSI: Data Tahapan Proses Produksi]": "Process Steps",
+  "process": [
+    {
+      "step": 1,
+      "title": "1. Pemanenan",
+      "description": "Wortel dipanen langsung dari kebun pada waktu yang tepat untuk menjaga kesegaran.",
+      "image": "/images/proses-pemanenan.jpg",
+      "# [INPUT GAMBAR: /images/proses-pemanenan.jpg - Petani memanen wortel di kebun]": "Process Image 1"
+    },
+    {
+      "step": 2,
+      "title": "2. Sortasi & Pembersihan",
+      "description": "Wortel diseleksi berdasarkan ukuran dan kualitas, lalu dicuci untuk memastikan kebersihan.",
+      "image": "/images/proses-sortasi.jpg",
+      "# [INPUT GAMBAR: /images/proses-sortasi.jpg - Pencucian & sortir wortel]": "Process Image 2"
+    },
+    {
+      "step": 3,
+      "title": "3. Grading & Packing",
+      "description": "Wortel dikelompokkan dan dikemas dengan standar higienis sesuai kebutuhan pelanggan.",
+      "image": "/images/proses-packing.jpg",
+      "# [INPUT GAMBAR: /images/proses-packing.jpg - Pengemasan wortel ke dalam kardus/crate]": "Process Image 3"
+    },
+    {
+      "step": 4,
+      "title": "4. Distribusi",
+      "description": "Produk didistribusikan dengan aman dan cepat agar tetap segar hingga sampai tujuan.",
+      "image": "/images/proses-distribusi.jpg",
+      "# [INPUT GAMBAR: /images/proses-distribusi.jpg - Truk / armada pengiriman]": "Process Image 4"
+    }
+  ],
+  "# [PENANDA FUNGSI: Data Galeri Foto]": "Gallery Data",
+  "gallery": [
+    { "id": 1, "category": "Kebun", "image": "/images/galeri-1.jpg", "title": "Lahan Pertanian" },
+    { "id": 2, "category": "Kebun", "image": "/images/galeri-2.jpg", "title": "Panen Wortel Segar" },
+    { "id": 3, "category": "Proses", "image": "/images/galeri-3.jpg", "title": "Pembersihan Wortel" },
+    { "id": 4, "category": "Produk", "image": "/images/galeri-4.jpg", "title": "Wortel Grade A" },
+    { "id": 5, "category": "Produk", "image": "/images/galeri-5.jpg", "title": "Stock Wortel" },
+    { "id": 6, "category": "Pengiriman", "image": "/images/galeri-6.jpg", "title": "Armada Pengiriman" },
+    { "id": 7, "category": "Kebun", "image": "/images/galeri-7.jpg", "title": "Petani Kebun" },
+    { "id": 8, "category": "Proses", "image": "/images/galeri-8.jpg", "title": "Proses Sorting" },
+    { "id": 9, "category": "Pengiriman", "image": "/images/galeri-9.jpg", "title": "Pengemasan Siap Kirim" }
+  ],
+  "# [PENANDA FUNGSI: Data Ringkasan Analitik]": "Analytics Summary",
+  "analytics": {
+    "visitors": { "count": "1.250", "growth": "+12%" },
+    "inquiries": { "count": "86", "growth": "+9%" },
+    "waClicks": { "count": "154", "growth": "+15%" }
+  }
+}

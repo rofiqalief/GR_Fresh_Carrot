@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* =========================================================
+   WARNA DASAR
+   ========================================================= */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+/* =========================================================
+   KONFIGURASI TAILWIND
+   ========================================================= */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-inter);
+}
+
+
+/* =========================================================
+   HTML & BODY SMOOTH SCROLL
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #171717;
+  font-family: var(--font-inter), sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-anton), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+
+/* =========================================================
+   BODY TEXT & INTERACTIVE
+   ========================================================= */
+
+p, a, button {
+  font-family: var(--font-inter), sans-serif;
+}
+
+
+/* =========================================================
+   CINEMATIC ANIMATION KEYFRAMES & UTILITIES
+   ========================================================= */
+
+@keyframes cinematicFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-cinematic {
+  animation: cinematicFadeInUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-cinematic-delayed {
+  animation: cinematicFadeInUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+  opacity: 0;
+}
