@@ -100,7 +100,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= SECTION 2: TENTANG KAMI (BALANCED & LEFT OVERLAP) ================= */}
+      {/* ================= SECTION 2: TENTANG KAMI (RESPONSIVE FIXED FOR MOBILE & DESKTOP) ================= */}
       <section id="tentang-kami" className={`relative w-full min-h-screen flex items-center justify-center py-20 md:py-28 px-4 sm:px-8 md:px-12 lg:px-16 bg-gray-50/60 overflow-hidden ${plusJakarta.className}`}>
         
         {/* ================= BACKGROUND SILUET CANDI BOROBUDUR (ANTENG & MULUS) ================= */}
@@ -111,7 +111,7 @@ export default function HomePage() {
         <div className="relative z-10 w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* KOLOM KIRI: Abstrak Perusahaan & 3 Statistik */}
-          <div className="lg:col-span-4 space-y-6 -mt-5 text-left">
+          <div className="lg:col-span-4 space-y-6 -mt-5 text-center lg:text-left flex flex-col items-center lg:items-start">
             <div className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 text-[11px] font-semibold px-3 py-1 rounded-full border border-emerald-100">
             </div>
 
@@ -120,7 +120,7 @@ export default function HomePage() {
             </h2>
 
             {/* Abstrak Perusahaan (2 Paragraf) */}
-            <div className="text-xs sm:text-sm text-gray-600 leading-relaxed font-medium bg-emerald-50/50 border border-emerald-100/60 p-4 rounded-2xl shadow-xs space-y-2">
+            <div className="text-xs sm:text-sm text-gray-600 leading-relaxed font-medium bg-emerald-50/50 border border-emerald-100/60 p-4 rounded-2xl shadow-xs space-y-2 text-left w-full">
               <p>
                 GR Fresh Carrot merupakan usaha yang bergerak
                 di bidang pertanian dan penyediaan wortel segar.
@@ -141,26 +141,41 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Grid 3 Statistik Utama (Berderet ke Bawah & Ukuran Kompak) */}
-            <div className="flex flex-col gap-3 pt-2">
-              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-gray-100 shadow-sm transition-transform duration-300 hover:scale-105 text-center w-full max-w-xs">
+            {/* Grid 3 Statistik Utama (Berderet ke Bawah & Ukuran Kompak - Rata Tengah di HP) */}
+            <div className="flex flex-col items-center lg:items-start gap-3 pt-2 w-full">
+              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-gray-100 shadow-sm transition-transform duration-300 hover:scale-105 text-center w-full max-w-xs mx-auto lg:mx-0">
                 <CounterStat target="100%" duration={1500} />
                 <p className="text-[10px] sm:text-[11px] text-gray-500 font-semibold mt-0.5 leading-tight">Mutu Alami</p>
               </div>
-              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-gray-100 shadow-sm transition-transform duration-300 hover:scale-105 text-center w-full max-w-xs">
+              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-gray-100 shadow-sm transition-transform duration-300 hover:scale-105 text-center w-full max-w-xs mx-auto lg:mx-0">
                 <CounterStat target="1+ Ton" duration={1500} />
                 <p className="text-[10px] sm:text-[11px] text-gray-500 font-semibold mt-0.5 leading-tight">Suplai Bulanan</p>
               </div>
-              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-gray-100 shadow-sm transition-transform duration-300 hover:scale-105 text-center w-full max-w-xs">
+              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-gray-100 shadow-sm transition-transform duration-300 hover:scale-105 text-center w-full max-w-xs mx-auto lg:mx-0">
                 <CounterStat target="3+ Kota" duration={1500} />
                 <p className="text-[10px] sm:text-[11px] text-gray-500 font-semibold mt-0.5 leading-tight">Distribusi</p>
               </div>
             </div>
           </div>
 
-          {/* KOLOM TENGAH: Kolase Foto Sesuai Layout Diagram */}
-          <div className="lg:col-span-5 relative flex mt-20 items-center justify-center py-6">
-            <div className="relative w-full max-w-lg h-[460px] sm:h-[500px] flex items-center justify-center">
+          {/* KOLOM TENGAH: Kolase Foto (Responsive: Grid rapi di HP, Absolute di Desktop) */}
+          <div className="lg:col-span-5 relative flex mt-10 lg:mt-20 items-center justify-center py-6">
+            
+            {/* Tampilan Mobile: Grid Stack Rapi */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md block lg:hidden">
+              <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                <Image src="/images/nyabutwortel.jpg" alt="Wortel Segar" fill className="object-cover" />
+              </div>
+              <div className="relative w-full h-56 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                <Image src="/images/rawatwortel.jpg" alt="Proses Panen" fill className="object-cover" />
+              </div>
+              <div className="relative w-full h-56 sm:col-span-2 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                <Image src="/images/peti.jpg" alt="Kebun Muntilan" fill className="object-cover" />
+              </div>
+            </div>
+
+            {/* Tampilan Desktop: Absolute Layout Semula */}
+            <div className="relative w-full max-w-lg h-[460px] sm:h-[500px] hidden lg:flex items-center justify-center">
               
               {/* 1. Foto Bawah (Posisi Bawah-Kiri) */}
               <div className="absolute bottom-5 -left-40 w-56 sm:w-64 h-36 sm:h-40 rounded-3xl overflow-hidden shadow-2xl border-7 border-white z-10">
