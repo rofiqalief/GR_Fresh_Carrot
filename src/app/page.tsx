@@ -18,10 +18,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export default function HomePage() {
-  const [expandedCard, setExpandedCard] = useState(null);
-  const [selectedStep, setSelectedStep] = useState(null);
-  const [maxUnlocked, setMaxUnlocked] = useState(0);
-  const [isSpinning, setIsSpinning] = useState(null);
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [selectedStep, setSelectedStep] = useState<number | null>(null);
+  const [maxUnlocked, setMaxUnlocked] = useState<number>(0);
+  const [isSpinning, setIsSpinning] = useState<any>(null);
   const { company } = db;
 
   const products = [
@@ -631,15 +631,15 @@ export default function HomePage() {
 // ==========================================
 // HELPER COMPONENT UNTUK EFEK ANGKA COUNTER
 // ==========================================
-function CounterStat({ target, duration = 1500 }) {
-  const [displayValue, setDisplayValue] = useState('0');
+function CounterStat({ target, duration = 1500 }: { target: string; duration?: number }) {
+  const [displayValue, setDisplayValue] = useState<string>('0');
 
   useEffect(() => {
-    let startTime = null;
+    let startTime: number | null = null;
     const numericTarget = parseInt(target.replace(/[^0-9]/g, '')) || 0;
     const suffix = target.replace(/[0-9]/g, '');
 
-    const animate = (currentTime) => {
+    const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       const currentVal = Math.floor(progress * numericTarget);
