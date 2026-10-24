@@ -67,7 +67,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 w-full h-16 md:h-20 transition-all duration-500 ease-in-out ${
         scrolled
           ? "bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-md py-0"
-          : "bg-transparent border-b border-white/20 py-2"
+          : "bg-transparent border-none py-2"
       }`}
     >
       <div className="w-full h-full px-4 sm:px-8 md:px-12 lg:px-16 flex items-center justify-between">
@@ -114,12 +114,12 @@ export default function Navbar() {
           </div>
         </a>
 
-        {/* 2. MENU DI TENGAH */}
+        {/* 2. MENU DI TENGAH (Nge-blend Total Menyatu dengan Navbar Putih) */}
         <nav
-          className={`hidden md:flex items-center h-10 gap-1 px-3 transition-all duration-500 ease-in-out ${
+          className={`hidden md:flex items-center h-10 gap-1 px-3 rounded-2xl transition-colors duration-200 ease-in-out ${
             !scrolled
-              ? "bg-white/85 backdrop-blur-md rounded-2xl shadow-xl border border-white/30"
-              : "bg-transparent"
+              ? "bg-white/85 backdrop-blur-md shadow-lg"
+              : "bg-transparent shadow-none border-none"
           }`}
         >
           {menuItems.map((item) => {
@@ -129,10 +129,10 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setActiveSection(item.id)}
-                className={`px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all duration-300 ${
+                className={`px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-xl transition-all duration-200 ${
                   isActive
-                    ? "text-emerald-700 bg-emerald-50 font-bold shadow-sm"
-                    : "text-gray-700 hover:text-emerald-700 hover:bg-gray-100/60"
+                    ? "text-emerald-700 bg-emerald-50 font-bold shadow-xs"
+                    : "text-gray-700 hover:text-emerald-700 hover:bg-gray-100/80"
                 }`}
               >
                 {item.name}
@@ -144,7 +144,7 @@ export default function Navbar() {
         {/* 3. TOMBOL CTA DI KANAN */}
         <div className="hidden md:flex items-center">
           <a
-            href={`https://wa.me/${company.phone}?text=Halo%20Golden%20Roots,%20saya%20tertarik%20dengan%20pasokan%20wortel%20segar.`}
+            href={`https://wa.me/${6287716704421}?text=Halo%20Golden%20Roots,%20saya%20tertarik%20dengan%20pasokan%20wortel%20segar.`}
             target="_blank"
             rel="noreferrer"
             className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full shadow-md transition-all duration-300 hover:scale-105 flex items-center gap-1.5"
